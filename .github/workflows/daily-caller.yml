@@ -1,0 +1,13 @@
+name: Daily AI Caller Scheduler
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show scheduled time
+        run: echo "Daily AI caller workflow started!"
